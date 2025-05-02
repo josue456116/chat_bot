@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot con Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <h2>Chatbot Virtual</h2>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <!-- Los mensajes se agregarán dinámicamente aquí -->
+        </div>
+        <div class="input-container">
+            <form id="chat-form" method="POST" action="{{ url_for('chat') }}">
+                <input type="text" 
+                       id="user-input" 
+                       name="message" 
+                       placeholder="Escribe tu mensaje aquí..." 
+                       autocomplete="off" 
+                       required>
+                <button type="submit" id="send-btn">
+                    <span class="send-icon">📤</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Usamos url_for para los recursos JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

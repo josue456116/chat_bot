@@ -1,0 +1,45 @@
+pregunta,respuesta,categoria
+// Conceptos básicos
+"¿Qué es Python?","Python es un lenguaje de programación interpretado, de alto nivel y de propósito general, creado por Guido van Rossum en 1991.",conceptos
+"¿Por qué usar Python?","Python es popular por su sintaxis clara y legible, gran comunidad, abundantes bibliotecas y versatilidad en diferentes campos como web, datos, IA y más.",conceptos
+"¿Qué son las variables en Python?","Las variables son contenedores para almacenar datos. En Python, no necesitas declarar el tipo de variable, se infiere automáticamente.",conceptos
+
+// Tipos de datos
+"¿Qué tipos de datos hay en Python?","Los tipos básicos son: int (enteros), float (decimales), str (texto), bool (booleano), list (listas), tuple (tuplas), dict (diccionarios) y set (conjuntos).",tipos_datos
+"¿Qué es una lista en Python?","Una lista es una colección ordenada y mutable de elementos. Se define usando corchetes, por ejemplo: [1, 2, 3]",tipos_datos
+"¿Qué es un diccionario?","Un diccionario es una colección de pares clave-valor. Se define usando llaves, por ejemplo: {'nombre': 'Juan', 'edad': 25}",tipos_datos
+
+// Funciones y métodos
+"¿Qué es una función?","Una función es un bloque de código reutilizable que realiza una tarea específica. Se define con 'def' en Python.",funciones
+"¿Qué es un método?","Un método es una función que pertenece a un objeto o clase específica.",funciones
+"¿Qué son los argumentos?","Los argumentos son valores que se pasan a una función cuando se llama.",funciones
+
+// Programación Orientada a Objetos
+"¿Qué es una clase?","Una clase es una plantilla para crear objetos, que encapsula datos y comportamiento.",poo
+"¿Qué es un objeto?","Un objeto es una instancia de una clase, que tiene atributos (datos) y métodos (comportamiento).",poo
+"¿Qué es la herencia?","La herencia permite que una clase herede atributos y métodos de otra clase.",poo
+
+// Control de flujo
+"¿Qué es un if?","Un if es una estructura de control que permite ejecutar código basado en una condición.",control_flujo
+"¿Qué es un bucle for?","Un bucle for se usa para iterar sobre una secuencia (lista, tupla, etc.) o ejecutar código un número específico de veces.",control_flujo
+"¿Qué es un while?","Un bucle while ejecuta código mientras una condición sea verdadera.",control_flujo
+
+// Módulos y paquetes
+"¿Qué es un módulo?","Un módulo es un archivo que contiene código Python reutilizable.",modulos
+"¿Qué es pip?","PIP es el sistema de gestión de paquetes de Python, usado para instalar y manejar paquetes adicionales.",modulos
+"¿Cómo importar un módulo?","Se usa la palabra clave 'import' seguida del nombre del módulo, por ejemplo: 'import math'",modulos
+
+// Manejo de errores
+"¿Qué es una excepción?","Una excepción es un error que ocurre durante la ejecución del programa.",errores
+"¿Qué es try-except?","Try-except es una estructura para manejar errores y excepciones en Python.",errores
+"¿Cómo manejar errores?","Se usan bloques try-except para capturar y manejar excepciones de forma controlada.",errores
+
+// Bibliotecas populares
+"¿Qué es NumPy?","NumPy es una biblioteca para computación numérica y arrays multidimensionales.",bibliotecas
+"¿Qué es Pandas?","Pandas es una biblioteca para análisis y manipulación de datos.",bibliotecas
+"¿Qué es Matplotlib?","Matplotlib es una biblioteca para crear visualizaciones y gráficos.",bibliotecas
+
+// Buenas prácticas
+"¿Qué es PEP 8?","PEP 8 es la guía de estilo para código Python, define convenciones como indentación y nombrado.",buenas_practicas
+"¿Qué son los docstrings?","Los docstrings son cadenas de documentación que explican el propósito y funcionamiento del código.",buenas_practicas
+"¿Qué es la indentación?","La indentación es el espaciado al inicio de una línea, en Python es obligatoria y define bloques de código.",buenas_practicas

@@ -1,0 +1,261 @@
+/* CSS Futurista limpio, invertido y con colores suaves */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(160deg, #1f1c2c, #928dab);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0; /* Asegura que no haya márgenes externos */
+}
+
+.chat-container {
+  width: 400px;
+  max-width: 95vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que los elementos internos estén bien distribuidos */
+  background: rgba(20, 20, 30, 0.9); /* Más opacidad para mejor contraste */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  animation: fadeInUp 1s ease-in-out;
+  box-shadow: 0 0 30px rgba(200, 200, 255, 0.2); /* Más suavidad en la sombra */
+  backdrop-filter: blur(15px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #fbc2eb, #a6c1ee, #fbc2eb);
+  z-index: -1;
+  border-radius: 20px;
+  animation: neon-border 8s linear infinite;
+  filter: blur(6px);
+}
+
+@keyframes neon-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: #0f0f0f;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px; /* Tamaño de fuente ligeramente mayor */
+  font-weight: bold;
+  text-shadow: 0 0 8px #e6c3f9; /* Más brillo en el texto */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos del chat mejorados */
+.chat-box {
+  flex-grow: 1; /* Permite que el chat-box ocupe el espacio disponible */
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.1); /* Fondo más suave */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaciado uniforme entre mensajes */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.message {
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-wrap: break-word;
+  position: relative;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+/* Usuario: Izquierda */
+.user-message {
+  background: #2196F3;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  margin-left: auto;
+  animation-name: slideInRight;
+}
+
+.bot-message {
+  background: #e9ecef;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  margin-right: auto;
+  animation-name: slideInLeft;
+}
+
+/* Añadir indicadores de chat */
+.user-message::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #2196F3;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.bot-message::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #e9ecef;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.input-container {
+  display: flex;
+  padding: 14px;
+  background-color: rgba(10, 15, 25, 0.9); /* Fondo más oscuro */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  justify-content: center; /* Centra los elementos dentro del contenedor */
+  gap: 10px; /* Espaciado entre el input y el botón */
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 12px 16px; /* Más espacio interno */
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Fondo más suave */
+  color: #e0f7fa;
+  font-size: 16px; /* Tamaño de fuente más grande */
+  outline: none;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(173, 216, 230, 0.2);
+  transition: 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px #fbc2eb;
+  border-color: #fbc2eb;
+}
+
+button {
+  padding: 12px 20px; /* Más espacio interno */
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  border: none;
+  border-radius: 20px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(250, 200, 255, 0.4); /* Más suavidad en la sombra */
+}
+
+button:hover {
+  transform: scale(1.1); /* Efecto hover más pronunciado */
+  box-shadow: 0 0 25px rgba(250, 200, 255, 0.6);
+}
+
+/* Animaciones para los mensajes */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para el typing indicator */
+.typing-indicator {
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Centra los puntos */
+  gap: 8px; /* Más espacio entre los puntos */
+  animation: fadeIn 0.3s ease-out;
+}
+
+.typing-dot {
+  width: 10px; /* Tamaño más grande */
+  height: 10px;
+  background: #90a4ae;
+  border-radius: 50%;
+  animation: typingBounce 1s infinite;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+}
